@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html@drew tekan love</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong><h3>happy valentine</h3></strong>
+                        <p>
+                           <h4><i>happy valentine pani.. sorry blom bisa ngasih coklat😹😹
+                            <p>hehe:)</h4> </i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var audioElement = document.getElementById('linkmp3');
+  
+        audioElement.play();
+    });
+  </script>
+  <body>
+    <audio src="https://b.top4top.io/m_2963ax8hk1.mp3" id="linkmp3" class="sembunyi" loop></audio>
+    <button id="play-btn" class="sembunyi"></button>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const audioElement = document.getElementById('linkmp3');
+        const playBtn = document.getElementById('play-btn');
+  
+        audioElement.addEventListener('loadedmetadata', () => {
+          playBtn.classList.remove('sembunyi');
+          audioElement.play();
+        });
+  
+        playBtn.addEventListener('click', () => {
+          if (audioElement.paused) {
+            audioElement.play();
+            playBtn.classList.add('playing');
+          } else {
+            audioElement.pause();
+            playBtn.classList.remove('playing');
+          }
+        });
+  
+        audioElement.addEventListener('ended', () => {
+          playBtn.classList.remove('playing');
+        });
+  
+        audioElement.addEventListener('play', () => {
+          playBtn.classList.add('playing');
+        });
+  
+        audioElement.addEventListener('pause', () => {
+          playBtn.classList.remove('playing');
+        });
+  
+        document.addEventListener('click', (event) => {
+          if (event.target !== playBtn && audioElement.paused) {
+            audioElement.play();
+            playBtn.classList.add('playing');
+          }
+        });
+      });
+    </script>
+    
+</body>
+</html>
